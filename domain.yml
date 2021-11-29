@@ -1,0 +1,165 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- yesQuiz:
+    use_entities: true
+- coolQuiz:
+    use_entities: true
+- noQuiz:
+    use_entities: true
+- gender:
+    use_entities: true
+- name_entry:
+    use_entities: true
+- history_mental_illness:
+    use_entities: true
+- work_interference:
+    use_entities: true
+- company_no_employees:
+    use_entities: true
+- tech_company:
+    use_entities: true
+- health_benefits:
+    use_entities: true
+- health_resources:
+    use_entities: true
+- treatment_five:
+    use_entities: true
+- medical_leave:
+    use_entities: true
+- discussing_mental_health:
+    use_entities: true
+- willing_to_discuss_collegaue:
+    use_entities: true
+- willing_to_discuss_supervisor:
+    use_entities: true
+- willing_to_discuss_employer:
+    use_entities: true
+- willing_to_discuss_physical_employer:
+    use_entities: true
+- serious_mental_health:
+    use_entities: true
+- negative_consequences_mental_coworker:
+    use_entities: true
+entities:
+- quiz_selection
+- name
+slots:
+  quiz_selection:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  name:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hi ! I am PsyBot - a safe place created just to help you with Imposter Syndrome
+  utter_disclaimer:
+  - text: I am NOT a diagnostic tool. /n Mental health disorders can only be diagnosed by a licensed mental health provider or doctor.
+  utter_quiz:
+  - text: Do you want to take an Imposter Syndrome Checker Quiz?
+  utter_yesQuiz:
+  - text: Firstly, would you consider yourself to be suffering or have you ever suffered from impostor syndrome?
+  utter_noQuiz:
+  - text: Now that you are an impostor specialist,let's continue on to talk about ways we can tackle this nasty feeling
+  utter_coolQuiz:
+  - text: Okay Cool , here is the [documenentation link](https://www.imposterhood.com/wp-content/uploads/2018/04/Imposter-Syndrome-Questionnaire-for-IH-Website.pdf) to help you
+  utter_check:
+  - text: Before we proceed , let's discuss few points
+  utter_implife:
+  - text: Impostor syndrome can vary during life. It can disappear or reappear, depending on your work situation, team, family, workplace culture, etc...
+  utter_gender:
+  - text: What is your gender identity?
+  utter_history_mental_illness:
+  - text: Do you have a family history of mental illness?
+  utter_work_interference:
+  - text: Do you feel it interferes with your work?
+  utter_name:
+  - text: What is your name?
+  utter_tech_company:
+  - text: Is your employer primarily a tech company/organization?
+  utter_health_benefits:
+  - text: Does your employer provide mental health benefits?
+  utter_health_resources:
+  - text: Do you know the options for mental health care your employer provides?
+  utter_treatment_q1:
+  - text: |-
+      Now make a list of few things that make you good at your job 
+       No need to be modest here, I haven't been programmed to judge
+  utter_discussing_mental_health:
+  - text: Do you think that discussing the imposter syndrome issue with your employer would have negative consequences?
+  utter_willing_to_discuss_collegaue:
+  - text: Would you be willing to discuss the imposter syndrome issue with your coworkers?
+  utter_willing_to_discuss_employer:
+  - text: Would you bring up the imposter syndrome issue with a potential employer in an interview?
+  utter_diminish1:
+  - text: Sometimes we diminish our own achievements, believing others have accomplished more, or are more skilled and experienced than us
+  utter_diminish2:
+  - text: Every time you think someone doesn't struggle, imagine they might be hiding their difficulty (just like you) !!
+  utter_serious_mental_health:
+  - text: Do you feel that you can face your fears such as daring to ask questions or asking for help?
+  utter_seriousq1:
+  - text: All these actions can help you to realise that nothing bad will happen when you don't know something
+  utter_seriousq2:
+  - text: Except maybe that people will be willing to help you and that you will learn and grow
+  utter_negative_consequences_mental_coworker:
+  - text: Do you struggle to fit in your workplace?
+  utter_consequence1:
+  - text: So don't be too hard on yourself when these situations arise
+  utter_consequence2:
+  - text: It is not your responsibility to fit into a workplace, it is the duty of the management to ensure the workplace is inclusive for all
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_cheer_up_two:
+  - text: Maybe you should try watching Tom and Jerry, it always helps!
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: |-
+      GoodBye, take care! Hope To See You Soon !
+      Just Type 'hey' or 'hi' anytime again to redirect to the main phase of bot !
+  utter_iamabot:
+  - text: I am a friendly Imposter Syndrome chat bot, your closest ally.
+  utter_tracker:
+  - text: What we are going to do is help you to create a success tracker that you can use every time you are confronted by your insecurities
+  utter_imposter:
+  - image: https://assets-global.website-files.com/61082de7b224bb1768edad68/61268978edc85f62d99f7f6d_DpvF1e2UYAAKPeW.jpg-large-768x768.jpeg
+    text: Imposter syndrome is defined as doubting your abilities and feeling like a fraud. It affects people, who find it difficult to accept their accomplishments.
+  utter_final:
+  - text: Hope this conversation helped you to understand impostor syndrome better.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_welcome:
+  - text: |-
+      Great! 
+      Just type 'hey' or 'hi' again to redirect to the main phase of bot !
+actions:
+- action_service
+- action_hello_world
+forms: {}
+e2e_actions: []

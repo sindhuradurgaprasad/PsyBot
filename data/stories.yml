@@ -1,0 +1,77 @@
+version: "2.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_imposter
+  - action: action_service
+- story: Yes Quiz
+  steps:
+  - intent: yesQuiz
+    entities:
+    - quiz_selection: yes
+  - slot_was_set:
+    - quiz_selection: yes
+  - action: utter_coolQuiz
+  - action: utter_disclaimer
+  - action: utter_final
+  - action: utter_welcome
+- story: No Quiz
+  steps:
+  - intent: noQuiz
+    entities:
+    - quiz_selection: no
+  - slot_was_set:
+
+    - quiz_selection: no
+  - action: utter_noQuiz
+  - action: utter_check
+  - action: utter_gender
+  - intent: gender
+  - action: utter_history_mental_illness
+  - intent: history_mental_illness
+  - action: utter_work_interference
+  - intent: work_interference
+  - action: utter_implife
+  - action: utter_tracker
+  - action: utter_tech_company
+  - intent: tech_company
+  - action: utter_health_benefits
+  - intent: health_benefits
+  - action: utter_health_resources
+  - intent: health_resources
+  - action: utter_treatment_q1
+  - intent: treatment_five
+  - action: utter_discussing_mental_health
+  - intent: discussing_mental_health
+  - action: utter_willing_to_discuss_collegaue
+  - intent: willing_to_discuss_collegaue
+  - action: utter_willing_to_discuss_employer
+  - intent: willing_to_discuss_employer
+  - action: utter_diminish1
+  - action: utter_diminish2
+  - action: utter_serious_mental_health
+  - intent: serious_mental_health
+  - action: utter_negative_consequences_mental_coworker
+  - intent: negative_consequences_mental_coworker
+  - action: utter_consequence1
+  - action: utter_consequence2
+  - action: utter_final
+  - action: utter_welcome
+- story: Story from Conversation ID ed6cd6f5e0734db5903408d7399deb73
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_imposter
+  - action: action_service
+  - intent: yesQuiz
+    entities:
+    - quiz_selection: yes
+  - slot_was_set:
+    - quiz_selection: yes
+  - action: utter_coolQuiz
+  - slot_was_set:
+    - quiz_selection: yes
+  - action: utter_disclaimer
+  - action: utter_welcome

@@ -1,0 +1,248 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: yesQuiz
+  examples: |
+    - Yes I will take the [quiz](quiz_selection)
+    - [Quiz](quiz_selection) shall be attempted
+    - yep [Quiz](quiz_selection)
+    - yeah [Quiz](quiz_selection)
+    - ok [Quiz](quiz_selection)
+    - k [Quiz](quiz_selection)
+    - yes
+    - y
+    - k
+    - ok
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: noQuiz
+  examples: |
+    - No I will take the [quiz](quiz_selection)
+    - [Quiz](quiz_selection) shall not be attempted
+    - no [Quiz](quiz_selection)
+    - nah [Quiz](quiz_selection)
+    - nope [Quiz](quiz_selection)
+    - nada [Quiz](quiz_selection)
+    - n [Quiz](quiz_selection)
+    - na
+    - nope
+    - nah
+    - nada
+    - not interested
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - I understand now
+    - I finally get it
+    - i understand
+    - i get it
+- intent: gender
+  examples: |
+    - male
+    - female
+    - queer
+    - cis 
+    - trans 
+    - non binary
+    - binary 
+- intent: history_mental_illness
+  examples: |
+    - yes i do 
+    - yes i have history of mental illness in my family
+    - yeah my family does have history
+    - yepp my relatives are suffering from a form of mental illness
+    - no i dont have history of mental illness in my family
+    - nope my family doesnt have history
+    - i dont know not that i am aware of..
+- intent: work_interference
+  examples: |
+    - often
+    - sometimes
+    - rarely
+    - never
+    - smtime
+    - smtimes
+    - hardly 
+    - totally  
+   
+- intent: tech_company
+  examples: |
+    - yes it is a tech company
+    - yeah i work at a tech company
+    - yepp i am working at a tech company
+    - yup i work there
+    - no it isnt a tech company
+    - nope i dont work at a tech company
+
+- intent: health_benefits
+  examples: |
+    - yes he does
+    - yeah they do
+    - yepp my company does
+    - yup where i work i have them
+    - no not where i work
+    - nope they dont
+    - idk if he does or not
+
+- intent: health_resources
+  examples: |
+    - yes there are plenty
+    - yeah i am aware of all the options
+    - yepp i know
+    - yup i know them
+    - no i am not aware of my company provided health resources
+    - nope there arent meany health resources
+    - idk i am unaware
+    - i dont know i am not aware
+
+- intent: treatment_five
+  examples: |
+    - hardwork team spirit
+    - idk
+    - time management 
+    - meet deadlines 
+    - time management and hardwork
+    - idk i am not aware
+    - i dont know i am not fully aware
+    - i need to think
+
+- intent: discussing_mental_health
+  examples: |
+    - yes it will have bad consequences
+    - yeah what if they ask me to take unpaid leave
+    - yepp that would be nasty
+    - yup that will make him feel i cant handle work pressure and get stressed out easily
+    - no i dont think it would affect much if i discuss
+    - nope it wont cause any consequences
+    - idk i havent really thought of it
+
+- intent: willing_to_discuss_collegaue
+  examples: |
+    - yes i think i should
+    - yeah i guess so
+    - yepp i will be willing to discuss
+    - yup i will discuss
+    - no i wont
+    - nope what will they think of me
+    - idk i am not sure if i would
+    - some of them i will share, not all though
+
+- intent: willing_to_discuss_employer
+  examples: |
+    - yes i would
+    - yeah i would
+    - yepp i will
+    - yup i would why not
+    - no i wouldnt dare
+    - nope i wouldnt
+    - idk maybe i would
+    - i dont know maybe i wouldnt
+    - maybe but i am not sure if i should
+
+- intent: serious_mental_health
+  examples: |
+    - yes i do feel so
+    - yeah i do
+    - yepp he does
+    - yup he does take both of them seriously
+    - no he doesnt
+    - nope he just doesnt
+    - idk i havent been in such a situation
+    - i dont know i havent been in such a situation
+    - maybe but i havent been in such a situation
+
+- intent: negative_consequences_mental_coworker
+  examples: |
+    - yes i have
+    - yeah i have
+    - yepp i have
+    - yup i have
+    - no i havent
+    - nope i havent
+
