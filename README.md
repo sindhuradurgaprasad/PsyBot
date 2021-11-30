@@ -5,11 +5,13 @@ Understanding about Imposter Syndrome could be an important step towards getting
 Running the assistant
 Install Rasa Open Source: https://rasa.com/docs/rasa/user-guide/installation/
 
-Train the model:
-rasa train
+Run actions and train the model:
+rasa run actions & rasa train
 
-Open a second terminal window and start the action server:
-rasa run actions
-
-Return to the first terminal window and start the assistant on the command line:
+For Command line :
 rasa shell
+
+For Virtual Assistant in UI (Recommended)
+rasa x
+
+Please refer to Test Cases Doc for conversation flows
