@@ -14,4 +14,4 @@ rasa shell
 For Virtual Assistant in UI (Recommended)
 rasa x
 
-Please refer to Test Cases Doc for conversation flows
+Please refer to PsyBot_Conversational_Flow_And_Summary.pdf for conversation flows

@@ -1,91 +1,88 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
+version: "2.0"
 stories:
-- story: happy path 1
+- story: Story from Conversation ID 152d37fde093426ab66a8bb405b18df4
   steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-
-- story: happy path 2
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
-
-- story: sad path 3
-  steps:
-  - user: |
+  - intent: greet
+    user: |-
       hi
-    intent: greet
   - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
+  - action: utter_imposter
+  - action: action_service
+  - intent: yesQuiz
+    user: |-
+      /yesQuiz{"quiz_selection":"yes"}
+  - slot_was_set:
+    - quiz_selection: yes
+  - action: utter_coolQuiz
+  - action: utter_disclaimer
+  - action: utter_welcome
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - action: utter_imposter
+  - action: action_service
+  - intent: noQuiz
+    user: |-
+      /noQuiz{"quiz_selection":"no"}
+  - slot_was_set:
+    - quiz_selection: no
+  - action: utter_noQuiz
+  - action: utter_check
+  - action: utter_gender
+  - intent: gender
+    user: |-
+      female
+  - action: utter_history_mental_illness
+  - intent: history_mental_illness
+    user: |-
+      Yes I do
+  - action: utter_work_interference
+  - intent: work_interference
+    user: |-
+      Often
+  - action: utter_implife
+  - action: utter_tracker
+  - action: utter_tech_company
+  - intent: tech_company
+    user: |-
+      nope i dont work at a tech company
+  - action: utter_health_benefits
+  - intent: health_benefits
+    user: |-
+      yepp my company does
+  - action: utter_health_resources
+  - intent: health_resources
+    user: |-
+      idk i am unaware
+  - action: utter_treatment_q1
+  - intent: treatment_five
+    user: |-
+      hardwork team spirit
+  - action: utter_discussing_mental_health
+  - intent: discussing_mental_health
+    user: |-
+      Yes it will have bad consequence
+  - action: utter_willing_to_discuss_collegaue
+  - intent: willing_to_discuss_collegaue
+    user: |-
+      yeah I guess so
+  - action: utter_willing_to_discuss_employer
+  - intent: willing_to_discuss_employer
+    user: |-
+      no I wouldnt dare
+  - action: utter_diminish1
+  - action: utter_diminish2
+  - action: utter_serious_mental_health
+  - intent: serious_mental_health
+    user: |-
+      idk i havent been in such a situation
+  - action: utter_negative_consequences_mental_coworker
+  - intent: negative_consequences_mental_coworker
+    user: |-
+      yes i have
+  - action: utter_consequence1
+  - action: utter_consequence2
+  - action: utter_final
+  - action: utter_welcome
 
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
