@@ -1,0 +1,5 @@
+Rasa version – 2.8.15
+
+Python version 3.8
+
+Run rasa x after rasa run actions on the terminal
